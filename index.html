@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Online CV</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <label class="nav-burger" for="nav-toggle" aria-hidden="true">
+          <span></span>
+        </label>
+        <input type="checkbox" id="nav-toggle" />
+        <ul>
+          <li>
+            <button>
+              <a href="./pages/finalproject.html">Projet Final</a>
+            </button>
+          </li>
+          <li>
+            <button><a href="./pages/schooling.html">Établissement</a></button>
+          </li>
+          <li>
+            <h1><a href="./index.html">Bienvenue !</a></h1>
+          </li>
+          <li>
+            <button><a href="./pages/cvpage.html">Mon CV</a></button>
+          </li>
+          <li>
+            <button>
+              <a href="./pages/experience.html">Mes Experiences</a>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Structure du caroussel ici-->
+      <div class="carousel-wrapper">
+        <div id="carousel">
+          <div class="elementcarousel">
+            <h2>2022</h2>
+            <p>Lycée</p>
+            <div class="img">
+              <img
+                src="./images/photo_moi_2022.jpg"
+                alt="me in last high-school year"
+              />
+            </div>
+          </div>
+          <div class="elementcarousel">
+            <h2>2023</h2>
+            <p>L1 INFO</p>
+            <div class="img">
+              <img
+                src="./images/photo_moi_2023.jpg"
+                alt="me in my first year of IT degree"
+              />
+            </div>
+          </div>
+          <div class="elementcarousel">
+            <h2>2024</h2>
+            <p>L1 LLCER</p>
+            <div class="img">
+              <img
+                src="./images/photo_moi_2024.jpg"
+                alt="me in my first year of English degree"
+              />
+            </div>
+          </div>
+          <div class="elementcarousel">
+            <h2>2025</h2>
+            <p>BTS SIO</p>
+            <div class="img">
+              <img src="./images/photo_moi_2025.png" alt="me in BTS" />
+            </div>
+          </div>
+        </div>
+        <div id="lesboutons">
+          <button id="prevBtn">&#8592;</button>
+          <button id="nextBtn">&#8594;</button>
+        </div>
+      </div>
+      <div id="paratexte">
+        <p class="texte">
+          Bienvenue sur mon Site Web CV en ligne ! Je suis Matteo DOUTEAUD,<br />
+          j'ai 21 ans actuellement en BTS SIO (Services Informatiques aux
+          Organisations),<br />
+          je vise à partir en SLAM au 2eme semestre, afin de devenir développeur
+          d'applications.<br />
+        </p>
+        <div id="separateur"></div>
+        <p class="texte">
+          Sur ce site vous trouverez des informations quant à mon parcour<br />
+          mes expériences professionelles, ainsi que mon projet final de
+          certification DWFS<br />
+          N'hésitez pas à naviguer entre les différentes sections pour
+          explorer,<br />
+          et en apprendre plus sur moi et mon parcours !
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <p>DOUTEAUD Mattéo © 2025</p>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  /*Ici j'utilise calc pour que mon contenu
+  principal (en l'occurence main) soit toujours
+  à la hauteur de mon écran, et laisse
+  de la place au footer*/
+  min-height: calc(100vh - 150px);
+}
+
+main > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.5rem; /*Espace entre les éléments à l'intérieur
+  des différents div (c'est surtout pour la première div ici, 
+  même si j'aurai pu le faire avec un id pour cibler spécifiquement
+  cette div là). */
+}
+
+main > div > img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main > div > iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  overflow: hidden;
+  color: white;
+}
+
+td,
+th {
+  padding: 4px;
+}
+
+p {
+  max-width: 600px;
+}
+
+@media (max-width: 763px) {
+  main {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,159 @@
+#background-title h1 {
+  margin-top: 20px;
+  font-size: 100px;
+  background: linear-gradient(90deg, #44bbbb, #98ffff, #232728, #44bbbb);
+  background-size: 300% 300%;
+  /*webkit fait en sorte que cela puisse fonctionner sur 
+  chrome, safari, et la plupart des navigateurs basés sur
+  "WebKit" en gros. */
+  -webkit-background-clip: text; /*Le fond ne s'applique qu'à la zone que les lettres occupent*/
+  -webkit-text-fill-color: transparent; /*Rend le texte transparent*/
+  background-clip: text;
+  color: transparent;
+  animation: dégradé 2s ease-in-out infinite;
+  text-shadow: 0 2px 24px #44bbbb88;
+}
+
+@keyframes dégradé {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 800px;
+}
+article h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #54e7e7;
+}
+
+img {
+  display: flex;
+  margin-bottom: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #44bbbb44;
+}
+
+#duckbox {
+  max-width: 500px;
+  max-height: 500px;
+  margin-bottom: 1rem;
+}
+
+ol {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+ol > li {
+  font-size: 2rem;
+  color: #65dddd;
+  font-family: Arial, sans-serif;
+  margin: 1rem;
+}
+
+article h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #65dddd;
+}
+
+article p {
+  font-size: 1.2rem;
+  line-height: 28px;
+  color: #dddddd;
+  text-align: center;
+}
+
+b {
+  color: #ffff00;
+}
+
+#maquettefigma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+#maquettefigma .carousel-images {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 1rem;
+}
+
+#maquettefigma .carousel-images img {
+  position: absolute;
+  max-width: 1200px;
+  height: 500px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#maquettefigma .carousel-images img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.image-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+#maquettefigma .button-row button {
+  width: 45%;
+}
+
+#maquettefigma button {
+  margin-top: 0.7rem;
+  width: 25%;
+}
+
+#descriptionmaquette {
+  margin-top: 1rem;
+}
+
+em {
+  color: #ffff00;
+}
+
+abbr {
+  text-decoration: underline;
+}
+
+#lien {
+  color: #ffff00;
+  text-decoration: wavy underline;
+}
+
+#devtxt {
+  font-size: 32px;
+  color: #ffff00;
+}
+
+a {
+  color: #ffff00;
+  text-decoration: none;
+}

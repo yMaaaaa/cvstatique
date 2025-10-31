@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #393e45;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e3235;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  position: sticky;
+  opacity: 0.8;
+}
+
+nav:hover {
+  opacity: 1;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  opacity: 100%;
+  width: 100%;
+}
+
+button {
+  background: linear-gradient(135deg, #2e3235 0%, #232728 100%);
+  border: none;
+  border-radius: 30px;
+  padding: 0.7rem 1.4rem;
+  cursor: pointer;
+  /*Ici j'utilise cubic-bezier pour définir une courbe
+  d'interpolation (vitesse du changement qui évolue), ici
+  au début, ça démarre doucement, puis ça accélère, et enfin
+  ça ralentit.*/
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgb(68, 187, 187);
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  box-shadow: 0 4px 8px rgba(68, 187, 187);
+  background: linear-gradient(135deg, #1b1b1b 0%, #44bbbb 100%);
+}
+
+nav > ul > li > button > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+nav > ul > li > h1 > a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), color 0.3s,
+    text-shadow 0.3s;
+}
+
+nav > ul > li > h1 > a:hover {
+  color: #44bbbb;
+  transform: rotate(2deg) scale(1.2);
+  text-shadow: 0 0 8px #44bbbb, 0 0 16px #fff;
+  animation: animationtitre 0.7s infinite linear;
+}
+
+/*Sert à animer le titre dans la navbar,
+j'utilise des keyframes pour définir
+les différentes étapes chronologiques
+de mon animation, ici, la distance de séparation des lettres
+en fonction du temps !*/
+
+@keyframes animationtitre {
+  0% {
+    letter-spacing: 0.1em;
+  }
+  20% {
+    letter-spacing: 0.3em;
+  }
+  40% {
+    letter-spacing: 0.1em;
+  }
+  60% {
+    letter-spacing: 0.25em;
+  }
+  80% {
+    letter-spacing: 0.1em;
+  }
+  100% {
+    letter-spacing: 0em;
+  }
+}
+
+footer {
+  /*Je défini ici que mon footer ne doit pas rétrécir
+  même s'il se voit être "écrasé", de ce fait, le footer
+  prendra toujours la même place défini à l'avance sur 
+  toutes les pages.*/
+  flex-shrink: 0;
+  height: 77px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #44bbbb;
+  color: #ffffff;
+}
+
+p {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+
+th {
+  font-family: Arial, sans-serif;
+}
+
+td {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+
+h4 {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+@media (max-width: 763px) {
+  /* layout tweaks */
+  nav {
+    padding: 0.5rem 1rem;
+    position: relative;
+  }
+
+  /* je cache ici le menu burger quand on est en dessous de 
+  la taille du media query */
+  nav > ul {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    background-color: #2e3235;
+    position: absolute;
+    top: 56px; /* adjust depending on nav height */
+    left: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+  }
+
+  /* on stylise le label ici */
+  .nav-burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 8px;
+  }
+
+  .nav-burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+  }
+
+  .nav-burger span::before,
+  .nav-burger span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-burger span::before {
+    top: -7px;
+  }
+  .nav-burger span::after {
+    top: 7px;
+  }
+
+  /* on cache la checkbox ici */
+  #nav-toggle {
+    display: none;
+  }
+
+  /* petite animation pour montrer le menu burger */
+  #nav-toggle:checked + .nav-burger span {
+    background: transparent;
+  }
+
+  #nav-toggle:checked + .nav-burger span::before {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  #nav-toggle:checked + .nav-burger span::after {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  #nav-toggle:checked ~ ul {
+    display: flex;
+  }
+
+  /* ici on design le style du menu burger */
+  nav > ul > li {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  nav > ul > li > button {
+    width: 90%;
+    margin: 0.4rem auto;
+    display: block;
+  }
+
+  nav > ul > li > h1 {
+    margin: 0.25rem 0;
+  }
+}
