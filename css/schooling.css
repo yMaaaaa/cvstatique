@@ -1,3 +1,13 @@
+h4 > a {
+  text-decoration: none;
+  color: #44bbbb;
+}
+h4 > a:hover {
+  text-decoration: underline;
+}
+h4 > a:visited {
+  color: #44bbbb;
+}
 main {
   display: flex;
   flex-direction: row;
