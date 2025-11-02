@@ -1,3 +1,7 @@
+:root {
+  --couleur-principale: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -63,6 +67,7 @@ button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 1rem;
   color: #ffffff;
+  color: var(--couleur-principale);
   font-weight: 500;
   box-shadow: 0 2px 4px rgb(68, 187, 187);
   position: relative;
@@ -80,6 +85,10 @@ nav > ul > li > button > a {
 }
 nav > ul > li > h1 > a {
   color: #ffffff;
+  color: var(--couleur-principale);
+}
+nav > ul > li > h1 > a {
+  color: var(--couleur-principale);
   text-decoration: none;
   font-family: Arial, sans-serif;
   display: inline-block;
@@ -134,11 +143,13 @@ footer {
   align-items: center;
   background-color: #44bbbb;
   color: #ffffff;
+  color: var(--couleur-principale);
 }
 
 p {
   font-family: Arial, sans-serif;
   color: #ffffff;
+  color: var(--couleur-principale);
 }
 
 th {
@@ -152,17 +163,20 @@ td {
 h1 {
   font-family: Arial, sans-serif;
   color: #ffffff;
+  color: var(--couleur-principale);
   text-align: center;
 }
 
 h2 {
   font-family: Arial, sans-serif;
   color: #ffffff;
+  color: var(--couleur-principale);
 }
 
 h4 {
   font-family: Arial, sans-serif;
   color: #ffffff;
+  color: var(--couleur-principale);
 }
 
 #nav-toggle {
